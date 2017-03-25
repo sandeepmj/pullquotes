@@ -63,7 +63,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2.3em;
+    font-size: 3em;
 }
 
 h2, h3, figcaption {
@@ -71,12 +71,12 @@ h2, h3, figcaption {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 h3 {
-    font-size: .7em;
-    color: gray;
+    font-size: .9em;
+    color: #888;
 }
 
 .byline {
@@ -88,18 +88,70 @@ img {
 }
 
 figcaption {
-    font-size: .75em;
-    color: gray;
+    font-size: .9em;
+    color: #888;
     margin: 5px;
 }
 
 .text-container {
-    line-height: 1.3em;
+    line-height: 1.5em;
     margin: 4%;
 }
 
 p {
+    font-size: 1.3em;
     padding: 10px;
+}
+
+
+/*emphasize first letter in critical paragraphs*/
+
+p.intro::first-letter {
+    color: #D07E50;
+    font-size: 3em;
+    font-weight: 900;
+    padding-right: .1em;
+}
+
+
+/*emphasize a few words*/
+
+.highlight {
+    background: yellow;
+}
+
+
+/* unvisited link */
+
+a:link {
+    color: black;
+    text-decoration: none;
+    border-bottom: 3px solid red;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: red;
+}
+
+
+/*This is centered in mobile view but will be floated right in desktop view*/
+
+.pullquote-right {
+    margin: auto;
+    width: 75%;
+    font-family: Georgia;
+    font-size: 2em;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+p.pquote::first-letter {
+    color: #D07E50;
+    font-size: 2em;
+    font-weight: 900;
 }
 
 
@@ -111,4 +163,69 @@ p {
 
 @media(min-width: 729px) {
     /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+    figcaption {
+        padding-bottom: 10px;
+    }
+    .text-container {
+        width: 65%;
+        margin: auto;
+    }
+    /* visited link */
+    a:hover {
+        color: purple;
+        text-decoration: underline;
+    }
+    /* mouse over link */
+    a:active {
+        color: green;
+    }
+    .pullquote-right {
+        float: right;
+        width: 30%;
+        font-family: Georgia;
+        font-size: 2em;
+        margin: .2em 0em .2em 1.3em;
+        text-align: right;
+    }
+    blockquote {
+        width: 45%;
+        float: left;
+        /*allow content to float around pullquote*/
+        margin: 20px 26px 100px 75px;
+        padding: 0px;
+        font-size: 1.8em;
+        line-height: 1.5em;
+        font-family: 'Helvetica', sans-serif;
+        /*color: #0A5A44;*/
+        position: relative;
+    }
+    blockquote::before {
+        content: '\201c';
+        top: 20px;
+        left: -60px;
+    }
+    blockquote::after {
+        content: '\201d';
+        bottom: -55px;
+        /*left: 175px;*/
+    }
+    blockquote::before, blockquote::after {
+        font-size: 5.2em;
+        color: #D07E50;
+        font-family: 'georgia';
+        position: absolute;
+    }
+    blockquote cite {
+        font-size: .6em;
+        font-style: normal;
+        /*cite by default is italic. so this makes it normal*/
+        display: block;
+        line-height: 1em;
+        color: #888;
+        position: absolute;
+        top: 110%;
+    }
+}
+
+
 }

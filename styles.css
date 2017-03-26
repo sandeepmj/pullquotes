@@ -192,6 +192,19 @@ blockquote cite {
 }
 
 
+/*.fade-in {
+    visibility: hidden;
+}
+
+.fade-in: active {
+    visibility: visible;
+}*/
+
+#yoga {
+    display: none;
+}
+
+
 /* Tablet/Desktop overrides */
 
 @media(min-width: 681px) {

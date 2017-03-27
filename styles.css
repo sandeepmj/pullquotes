@@ -141,6 +141,10 @@ a:link, a:visited {
     text-align: center;
 }
 
+.pquote {
+    padding: 50px 0px 50px 0px;
+}
+
 p.pquote::first-letter {
     color: #D07E50;
     font-size: 2em;
@@ -148,47 +152,44 @@ p.pquote::first-letter {
 }
 
 blockquote {
-    width: 70%;
-    float: none;
-    /*prevents content from floating around pullquote*/
-    margin: 40px auto 100px auto;
-    padding: 0px;
-    font-size: 1.8em;
-    line-height: 1.5em;
+    width: 65%;
     text-align: center;
-    font-family: 'Helvetica', sans-serif;
+    padding: 0px;
+    margin: 30px auto 30px auto;
+    font-size: 1.4em;
+    line-height: 1.8em;
     position: relative;
 }
 
-blockquote::before {
-    content: '\201c';
-    top: 20px;
-    left: -22px;
-}
-
-blockquote::after {
-    content: '\201d';
-    bottom: -55px;
-}
-
-blockquote::before, blockquote::after {
-    font-size: 4.2em;
+blockquote p::before, blockquote p::after {
+    font-size: 3em;
     color: #D07E50;
     font-family: 'georgia';
     position: absolute;
 }
 
-blockquote cite {
+blockquote p::before {
+    content: '\201c';
+    display: inline-block;
+    padding-right: 10px;
+    left: -3px;
+}
+
+blockquote p::after {
+    content: '\201d';
+    display: inline-block;
+    padding-left: 10px;
+    bottom: 40px;
+}
+
+blockquote footer cite {
+    display: block;
+    font-family: 'Helvetica', sans-serif;
     font-size: .6em;
     font-style: normal;
-    /*cite by default is italic. so this makes it normal*/
-    display: block;
     line-height: 1.2em;
-    text-align: left;
+    text-align: right;
     color: #888;
-    position: absolute;
-    top: 110%;
-    right: 20px;
 }
 
 .thick-line {
@@ -230,18 +231,12 @@ blockquote cite {
         text-align: center;
     }
     blockquote {
-        float: none;
-        width: 60%;
-        /*allow content to float around pullquote*/
-        margin: 100px auto 150px auto;
-        padding: 0px;
+        width: 80%;
+        /*margin: 30px;*/
+        font-size: 1.6em;
     }
-    blockquote::before {
-        top: 20px;
-        left: -10px;
-    }
-    blockquote::after {
-        bottom: -80px;
+    blockquote p::before {
+        left: 25px;
     }
 }
 
@@ -262,15 +257,13 @@ blockquote cite {
     a:active {
         color: green;
     }
-    blockquote {
-        float: right;
-        width: 45%;
-        /*allow content to float around pullquote*/
-        margin: 100px 20px 150px 20px;
-        padding: 0px;
+    blockquote p::before {
+        left: -17px;
     }
-    blockquote::after {
-        bottom: -70px;
+    blockquote footer cite {
+        position: relative;
+        right: 100px;
+        font-size: .75em;
     }
     .thick-line {
         float: left;

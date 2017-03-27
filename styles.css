@@ -247,6 +247,9 @@ blockquote cite {
 
 @media(min-width: 729px) {
     /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+    p {
+        font-size: 1.5em;
+    }
     figcaption {
         padding-bottom: 10px;
     }
@@ -271,8 +274,8 @@ blockquote cite {
     }
     .thick-line {
         float: left;
-        width: 45%;
-        padding-right: 20px;
+        width: 40%;
+        margin: 30px 30px 30px 15px;
     }
 }
 

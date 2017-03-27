@@ -162,17 +162,18 @@ blockquote {
 
 blockquote::before {
     content: '\201c';
-    top: 20px;
-    left: -22px;
+    top: 12px;
+    left: -6px;
 }
 
 blockquote::after {
     content: '\201d';
-    bottom: -55px;
+    bottom: -35px;
+    right: -40px;
 }
 
 blockquote::before, blockquote::after {
-    font-size: 4.2em;
+    font-size: 3.2em;
     color: #D07E50;
     font-family: 'georgia';
     position: absolute;
@@ -230,9 +231,8 @@ blockquote cite {
         text-align: center;
     }
     blockquote {
-        float: none;
+        /*float: none;*/
         width: 60%;
-        /*allow content to float around pullquote*/
         margin: 100px auto 150px auto;
         padding: 0px;
     }
@@ -264,13 +264,14 @@ blockquote cite {
     }
     blockquote {
         float: right;
-        width: 45%;
+        width: 50%;
         /*allow content to float around pullquote*/
-        margin: 100px 20px 150px 20px;
+        margin: 100px 20px 150px 50px;
         padding: 0px;
     }
     blockquote::after {
-        bottom: -70px;
+        bottom: -50px;
+        right: 100px;
     }
     .thick-line {
         float: left;

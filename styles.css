@@ -58,12 +58,11 @@ html, body {
 }
 
 h1, h2, h3 {
-    /*line-height: 1.5em;*/
     margin: 5px 0px 10px 10px;
 }
 
 h1 {
-    font-size: 2.3em;
+    font-size: 3em;
 }
 
 h2, h3, figcaption {
@@ -71,12 +70,12 @@ h2, h3, figcaption {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 h3 {
-    font-size: .7em;
-    color: gray;
+    font-size: .9em;
+    color: #888;
 }
 
 .byline {
@@ -88,18 +87,120 @@ img {
 }
 
 figcaption {
-    font-size: .75em;
-    color: gray;
+    font-size: .9em;
+    color: #888;
     margin: 5px;
 }
 
 .text-container {
-    line-height: 1.3em;
+    line-height: 1.7em;
     margin: 4%;
 }
 
 p {
+    font-size: 1.3em;
     padding: 10px;
+}
+
+
+/*emphasize first letter in critical paragraphs*/
+
+p.intro::first-letter {
+    color: #D07E50;
+    font-size: 3em;
+    font-weight: 900;
+    padding-right: .1em;
+}
+
+
+/*emphasize a few words*/
+
+.highlight {
+    background: yellow;
+}
+
+
+/* unvisited and visited link */
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+    border-bottom: 3px solid red;
+    padding-bottom: .05em;
+}
+
+
+/*This is centered in mobile view but will be floated right in desktop view*/
+
+.pullquote-right {
+    margin: auto;
+    width: 75%;
+    font-family: Georgia;
+    font-size: 2em;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+p.pquote::first-letter {
+    color: #D07E50;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+blockquote {
+    width: 70%;
+    float: none;
+    /*prevents content from floating around pullquote*/
+    margin: 40px auto 100px auto;
+    padding: 0px;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    position: relative;
+}
+
+blockquote::before {
+    content: '\201c';
+    top: 20px;
+    left: -22px;
+}
+
+blockquote::after {
+    content: '\201d';
+    bottom: -55px;
+}
+
+blockquote::before, blockquote::after {
+    font-size: 4.2em;
+    color: #D07E50;
+    font-family: 'georgia';
+    position: absolute;
+}
+
+blockquote cite {
+    font-size: .6em;
+    font-style: normal;
+    /*cite by default is italic. so this makes it normal*/
+    display: block;
+    line-height: 1.2em;
+    text-align: left;
+    color: #888;
+    position: absolute;
+    top: 110%;
+    right: 20px;
+}
+
+.thick-line {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.75em;
+    font-weight: 900;
+    width: 70%;
+    border-left-style: solid;
+    border-width: 10px;
+    border-color: red;
+    padding: 20px 0px 20px 30px;
+    margin-left: 15px;
 }
 
 
@@ -107,8 +208,73 @@ p {
 
 @media(min-width: 681px) {
     /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    h1 {
+        font-size: 5em;
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    .text-container {
+        width: 65%;
+        margin: auto;
+    }
+    .pullquote-right, blockquote {
+        font-size: 2.5em;
+    }
+    .pullquote-right {
+        width: 75%;
+        float: none;
+        text-align: center;
+    }
+    blockquote {
+        float: none;
+        width: 80%;
+        /*allow content to float around pullquote*/
+        margin: 100px auto 150px auto;
+        padding: 0px;
+    }
+    blockquote::before {
+        top: 20px;
+        left: -10px;
+    }
+    blockquote::after {
+        bottom: -80px;
+    }
 }
 
 @media(min-width: 729px) {
     /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+    figcaption {
+        padding-bottom: 10px;
+    }
+    /* visited link */
+    a:hover {
+        color: purple;
+        text-decoration: underline;
+    }
+    /* mouse over link */
+    a:active {
+        color: green;
+    }
+    blockquote {
+        float: right;
+        width: 45%;
+        /*allow content to float around pullquote*/
+        margin: 100px 20px 150px 20px;
+        padding: 0px;
+    }
+    blockquote::after {
+        bottom: -70px;
+    }
+    .thick-line {
+        float: left;
+        width: 45%;
+        padding-right: 20px;
+    }
+}
+
+
 }

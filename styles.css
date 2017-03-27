@@ -231,7 +231,7 @@ blockquote cite {
     }
     blockquote {
         float: none;
-        width: 80%;
+        width: 60%;
         /*allow content to float around pullquote*/
         margin: 100px auto 150px auto;
         padding: 0px;

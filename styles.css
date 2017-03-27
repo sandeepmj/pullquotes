@@ -191,6 +191,18 @@ blockquote cite {
     right: 20px;
 }
 
+.thick-line {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.75em;
+    font-weight: 900;
+    width: 70%;
+    border-left-style: solid;
+    border-width: 10px;
+    border-color: red;
+    padding: 20px 0px 20px 30px;
+    margin-left: 15px;
+}
+
 
 /* Tablet/Desktop overrides */
 
@@ -256,6 +268,11 @@ blockquote cite {
     }
     blockquote::after {
         bottom: -70px;
+    }
+    .thick-line {
+        float: left;
+        width: 45%;
+        padding-right: 20px;
     }
 }
 

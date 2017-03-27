@@ -89,6 +89,7 @@ img {
 figcaption {
     font-size: .9em;
     color: #888;
+    line-height: 1.2em;
     margin: 5px;
 }
 
@@ -204,6 +205,22 @@ blockquote footer cite {
     margin-left: 15px;
 }
 
+.video-quote {
+    position: relative;
+}
+
+#damont-quote {
+    width: 50%;
+    font-size: 1.7em;
+    color: #47546C;
+    font-weight: 900;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
 
 /* Tablet/Desktop overrides */
 
@@ -238,6 +255,10 @@ blockquote footer cite {
     blockquote p::before {
         left: 25px;
     }
+    #damont-quote {
+        font-size: 2.5em;
+        line-height: 1em;
+    }
 }
 
 @media(min-width: 729px) {
@@ -271,6 +292,10 @@ blockquote footer cite {
         float: left;
         width: 40%;
         margin: 30px 30px 30px 15px;
+    }
+    #damont-quote {
+        font-size: 3.8em;
+        line-height: 1em;
     }
 }
 

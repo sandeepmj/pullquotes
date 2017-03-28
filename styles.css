@@ -175,7 +175,7 @@ blockquote {
 blockquote p::before, blockquote p::after {
     font-size: 3em;
     color: #D07E50;
-    font-family: 'georgia';
+    font-family: 'arial';
     position: absolute;
 }
 
@@ -183,12 +183,11 @@ blockquote p::before {
     content: '\201c';
     display: inline-block;
     padding-right: 10px;
-    left: -3px;
+    left: -13px;
 }
 
 blockquote p::after {
     content: '\201d';
-    display: inline-block;
     padding-left: 10px;
     bottom: 40px;
 }

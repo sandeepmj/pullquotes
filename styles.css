@@ -150,11 +150,17 @@ a:link, a:visited {
     padding: 50px 0px 50px 0px;
 }
 
+
+/*the the pseudo element ::first-letter*/
+
 p.pquote::first-letter {
     color: #D07E50;
     font-size: 2em;
     font-weight: 900;
 }
+
+
+/* If you want to know more about blockquote, cite and footer tags: http://html5doctor.com/blockquote-q-cite/*/
 
 blockquote {
     width: 65%;
@@ -197,6 +203,9 @@ blockquote footer cite {
     color: #888;
 }
 
+
+/*note that the line is simply a border on one side.*/
+
 .thick-line {
     font-family: 'Helvetica', sans-serif;
     font-size: 1.75em;
@@ -212,6 +221,9 @@ blockquote footer cite {
 .photo-quote {
     position: relative;
 }
+
+
+/*photo pullquote styling*/
 
 #damont-quote {
     width: 50%;

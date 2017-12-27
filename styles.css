@@ -6,325 +6,315 @@ Sometimes, when we stretch out to larger screens, we need to make minor tweaks f
 You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
 */
 
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif');
-
 /*used in photo pullquote*/
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
-
 
 /* HTML5 display-role reset for older browsers */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote, q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
+  content: '';
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
 
 /* Start your base/mobile styles here */
 
 html, body {
-    font-size: 16px;
-    /* Sets default font-size to 16px, ensuring 1em = 16px; */
-    font-family: "Georgia", serif;
+  font-size: 16px;
+  /* Sets default font-size to 16px, ensuring 1em = 16px; */
+  font-family: "Georgia", serif;
 }
 
 h1, h2, h3 {
-    margin: 5px 0px 10px 10px;
+  margin: 5px 0px 10px 10px;
 }
 
 h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 h2, h3, figcaption {
-    font-family: "Geneva", sans-serif;
+  font-family: "Geneva", sans-serif;
 }
 
 h2 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 h3 {
-    font-size: .9em;
-    color: #888;
+  font-size: .9em;
+  color: #888;
 }
 
 .byline {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 figcaption {
-    font-size: .9em;
-    color: #888;
-    line-height: 1.2em;
-    margin: 5px;
+  font-size: .9em;
+  color: #888;
+  line-height: 1.2em;
+  margin: 5px;
 }
 
 .text-container {
-    line-height: 1.7em;
-    margin: 4%;
+  line-height: 1.7em;
+  margin: 4%;
+  max-width: 95%;
 }
 
 p {
-    font-size: 1.3em;
-    padding: 10px;
+  font-size: 1.3em;
+  padding: 10px;
 }
-
 
 /*emphasize first letter in critical paragraphs*/
 
 p.intro::first-letter {
-    color: #D07E50;
-    font-size: 3em;
-    font-weight: 900;
-    padding-right: .1em;
+  color: #D07E50;
+  font-size: 3em;
+  font-weight: 900;
+  padding-right: .1em;
 }
-
 
 /*emphasize a few words*/
 
 .highlight {
-    background: yellow;
+  background: yellow;
 }
-
 
 /* unvisited and visited link */
 
 a:link, a:visited {
-    color: black;
-    text-decoration: none;
-    border-bottom: 3px solid red;
-    padding-bottom: .05em;
+  color: black;
+  text-decoration: none;
+  border-bottom: 3px solid red;
+  padding-bottom: .05em;
 }
-
 
 /*This is centered in mobile view but will be floated right in desktop view*/
 
 .pullquote-right {
-    margin: auto;
-    width: 75%;
-    font-family: Georgia;
-    font-size: 2em;
-    line-height: 1.3em;
-    text-align: center;
+  margin: auto;
+  width: 75%;
+  font-family: Georgia;
+  font-size: 2em;
+  line-height: 1.3em;
+  text-align: center;
 }
 
 .pquote {
-    padding: 50px 0px 50px 0px;
+  padding: 50px 0px 50px 0px;
 }
-
 
 /*the the pseudo element ::first-letter*/
 
 p.pquote::first-letter {
-    color: #D07E50;
-    font-size: 2em;
-    font-weight: 900;
+  color: #D07E50;
+  font-size: 2em;
+  font-weight: 900;
 }
-
 
 /* If you want to know more about blockquote, cite and footer tags: http://html5doctor.com/blockquote-q-cite/*/
 
 blockquote {
-    width: 65%;
-    text-align: center;
-    padding: 0px;
-    margin: 30px auto 30px auto;
-    font-size: 1.4em;
-    line-height: 1.8em;
-    position: relative;
+  width: 65%;
+  text-align: center;
+  padding: 0px;
+  margin: 30px auto 30px auto;
+  font-size: 1.4em;
+  line-height: 1.8em;
+  position: relative;
 }
 
 blockquote p::before, blockquote p::after {
-    font-size: 3em;
-    color: #D07E50;
-    font-family: 'arial';
-    position: absolute;
+  font-size: 3em;
+  color: #D07E50;
+  font-family: 'arial';
+  position: absolute;
 }
 
 blockquote p::before {
-    content: '\201c';
-    display: inline-block;
-    padding-right: 10px;
-    left: -13px;
+  content: '\201c';
+  display: inline-block;
+  padding-right: 10px;
+  left: -13px;
 }
 
 blockquote p::after {
-    content: '\201d';
-    padding-left: 10px;
-    bottom: 40px;
+  content: '\201d';
+  padding-left: 10px;
+  bottom: 40px;
 }
 
 blockquote footer cite {
-    display: block;
-    font-family: 'Helvetica', sans-serif;
-    font-size: .6em;
-    font-style: normal;
-    line-height: 1.2em;
-    text-align: right;
-    color: #888;
+  display: block;
+  font-family: 'Helvetica', sans-serif;
+  font-size: .6em;
+  font-style: normal;
+  line-height: 1.2em;
+  text-align: right;
+  color: #888;
 }
-
 
 /*note that the line is simply a border on one side.*/
 
 .thick-line {
-    font-family: 'Helvetica', sans-serif;
-    font-size: 1.75em;
-    font-weight: 900;
-    width: 70%;
-    border-left-style: solid;
-    border-width: 10px;
-    border-color: red;
-    padding: 20px 0px 20px 30px;
-    margin-left: 15px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.75em;
+  font-weight: 900;
+  width: 70%;
+  border-left-style: solid;
+  border-width: 10px;
+  border-color: red;
+  padding: 20px 0px 20px 30px;
+  margin-left: 15px;
 }
 
 .photo-quote {
-    position: relative;
+  position: relative;
 }
-
 
 /*photo pullquote styling*/
 
 #damont-quote {
-    width: 50%;
-    font-size: 1.7em;
-    color: #47546C;
-    font-weight: 900;
-    font-family: 'Noto Serif', serif;
-    text-align: center;
-    position: absolute;
-    top: 20px;
-    right: 30px;
+  width: 50%;
+  font-size: 1.7em;
+  color: #47546C;
+  font-weight: 900;
+  font-family: 'Noto Serif', serif;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  right: 30px;
 }
 
 #damont-quote::before, #damont-quote::after {
-    display: inline-block;
+  display: inline-block;
 }
 
 #damont-quote::before {
-    content: '\201c';
+  content: '\201c';
 }
 
 #damont-quote::after {
-    content: '\201d';
+  content: '\201d';
 }
-
 
 /* Tablet/Desktop overrides */
 
 @media(min-width: 681px) {
-    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-    h1 {
-        font-size: 5em;
-    }
-    h2 {
-        font-size: 2.5em;
-    }
-    h3 {
-        font-size: 1em;
-    }
-    .text-container {
-        width: 65%;
-        margin: auto;
-    }
-    .pullquote-right, blockquote {
-        font-size: 2.5em;
-    }
-    .pullquote-right {
-        width: 75%;
-        float: none;
-        text-align: center;
-    }
-    blockquote {
-        width: 80%;
-        /*margin: 30px;*/
-        font-size: 1.6em;
-    }
-    blockquote p::before {
-        left: 25px;
-    }
-    #damont-quote {
-        /*font-size: 2.5em;*/
-        line-height: 1em;
-    }
+  /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+  h1 {
+    font-size: 5em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  .text-container {
+    max-width: 65%;
+    margin: auto;
+  }
+  .pullquote-right, blockquote {
+    font-size: 2.5em;
+  }
+  .pullquote-right {
+    width: 75%;
+    float: none;
+    text-align: center;
+  }
+  blockquote {
+    width: 80%;
+    /*margin: 30px;*/
+    font-size: 1.6em;
+  }
+  blockquote p::before {
+    left: 25px;
+  }
+  #damont-quote {
+    /*font-size: 2.5em;*/
+    line-height: 1em;
+  }
 }
 
 @media(min-width: 729px) {
-    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
-    p {
-        font-size: 1.5em;
-    }
-    figcaption {
-        padding-bottom: 10px;
-    }
-    /* visited link */
-    a:hover {
-        color: purple;
-        text-decoration: underline;
-    }
-    /* mouse over link */
-    a:active {
-        color: green;
-    }
-    blockquote p::before {
-        left: -17px;
-    }
-    blockquote footer cite {
-        position: relative;
-        right: 100px;
-        font-size: .75em;
-    }
-    .thick-line {
-        font-size: 2.5em;
-        line-height: 1.1em;
-        float: left;
-        width: 40%;
-        margin: 30px 30px 30px 15px;
-    }
-    #damont-quote {
-        font-size: 2.5em;
-        line-height: 1em;
-    }
+  /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+  .text-container {
+    max-width: 40%;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  figcaption {
+    padding-bottom: 10px;
+  }
+  /* visited link */
+  a:hover {
+    color: purple;
+    text-decoration: underline;
+  }
+  /* mouse over link */
+  a:active {
+    color: green;
+  }
+  blockquote p::before {
+    left: -17px;
+  }
+  blockquote footer cite {
+    position: relative;
+    right: 100px;
+    font-size: .75em;
+  }
+  .thick-line {
+    font-size: 2.5em;
+    line-height: 1.1em;
+    float: left;
+    width: 40%;
+    margin: 30px 30px 30px 15px;
+  }
+  #damont-quote {
+    font-size: 2.5em;
+    line-height: 1em;
+  }
 }
-
 
 }

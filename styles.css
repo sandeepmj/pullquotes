@@ -23,6 +23,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* HTML5 display-role reset for older browsers */
 
+* {
+  box-sizing: border-box;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -71,6 +75,7 @@ h2, h3, figcaption {
 
 h2 {
   font-size: 1.5em;
+  line-height: 1.2em;
 }
 
 h3 {
@@ -85,6 +90,14 @@ h3 {
 img {
   width: 100%;
 }
+
+/*
+img {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: block;
+} */
 
 figcaption {
   font-size: .9em;
@@ -126,17 +139,19 @@ a:link, a:visited {
   text-decoration: none;
   border-bottom: 3px solid red;
   padding-bottom: .05em;
+  background-color: yellow;
 }
 
 /*This is centered in mobile view but will be floated right in desktop view*/
 
 .pullquote-right {
   margin: auto;
-  width: 75%;
+  width: 100%;
   font-family: Georgia;
   font-size: 2em;
-  line-height: 1.3em;
+  line-height: 1.4em;
   text-align: center;
+  padding: 1.5em;
 }
 
 .pquote {
@@ -180,7 +195,7 @@ blockquote p::before {
 
 blockquote p::after {
   content: '\201d';
-  padding-left: 10px;
+  padding-left: 25px;
   bottom: 40px;
 }
 
@@ -192,6 +207,7 @@ blockquote footer cite {
   line-height: 1.2em;
   text-align: right;
   color: #888;
+  padding-top: 20px;
 }
 
 /*note that the line is simply a border on one side.*/
@@ -298,8 +314,12 @@ blockquote footer cite {
   a:active {
     color: green;
   }
+  blockquote {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   blockquote p::before {
-    left: -17px;
+    left: -45px;
   }
   blockquote footer cite {
     position: relative;

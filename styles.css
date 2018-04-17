@@ -94,7 +94,7 @@ figcaption {
 }
 
 .text-container {
-  line-height: 1.7em;
+  line-height: 2em;
   margin: 4%;
   max-width: 95%;
 }
@@ -141,6 +141,7 @@ a:link, a:visited {
 
 .pquote {
   padding: 50px 0px 50px 0px;
+  line-height: 1.1em;
 }
 
 /*the the pseudo element ::first-letter*/
